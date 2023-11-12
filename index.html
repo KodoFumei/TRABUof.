@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>TRABU</title>
+</head>
+
+<body>
+    <h1>Travel Budget</h1>
+    <div class="form-container">
+        <label for="activity">Activity:</label>
+        <select id="activity-select">
+            <option value="choose">Choose Activity</option>
+            <option value="Accommodation">Accommodation</option>
+            <option value="Food">Food/Drinks</option>
+            <option value="Flights">Flights</option>
+            <option value="Taxi">Taxi</option>
+            <option value="Supermarket">Supermarket</option>
+            <option value="Shopping">Shopping</option>
+            <option value="custom">Custom Activity</option>
+        </select>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required>
+        <label for="currency">Select Currency:</label>
+        <select id="currency">
+            <option value="THB">Thai Baht</option>
+            <!-- Add more currencies as needed -->
+        </select>
+
+        <label for="exchange-rate">Exchange Rate:</label>
+        <input type="number" id="exchange-rate" placeholder="Enter exchange rate">
+
+        <button id="add-activity">Add Activity</button>
+    </div>
+    <div class="activity-list">
+        <h2>Activity List</h2>
+        <ul id="activity-list">
+        </ul>
+        <p>Total Expenses: <span id="total-amount">0</span>€ </p>
+    </div>
+    <div class="category">
+        <h3>Activity Summary:</h3>
+        <label for="category-select">Select a category: </label>
+        <select id="category-select">
+            <option value="">All Categories</option>
+            <option value="Accommodation">Accommodation</option>
+            <option value="Food">Food/Drinks</option>
+            <option value="Flights">Flights</option>
+            <option value="Taxi">Taxi</option>
+            <option value="Supermarket">Supermarket</option>
+            <option value="Shopping">Shopping</option>
+            <option value="custom">Custom Activity</option>
+        </select>
+        <button id="show-amount-button">Show amount in Euros</button>
+        <div id="amount-spent"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
